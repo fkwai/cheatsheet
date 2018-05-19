@@ -8,8 +8,12 @@ Welcome to cheatsheet's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Tips
 
+   Tips/wrgroup
+   Tips/Dataset
+   Tips/Tools
+   Tips/DeepLearning
 
 
 Indices and tables
