@@ -35,3 +35,9 @@ set tabstop=4
 set shiftwidth=4
 ```
 install youcompleteme from vundle
+
+## Screen
+### run screen by script
+```
+CUDA_VISIBLE_DEVICES=0 screen -dmS test th trainLSTM.lua
+```
