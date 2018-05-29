@@ -7,7 +7,7 @@ Python
     - `numpy`_
     - `pytorch`_
 
-.. _official document: https://docs.python.org/3/
+.. _official python: https://docs.python.org/3/
 .. _cookbook: https://readthedocs.org/projects/python-cookbook/
-.. _numpy document: https://docs.scipy.org/doc/numpy/index.html
-.. _pytorch document: https://pytorch.org/docs/stable/index.html
+.. _numpy: https://docs.scipy.org/doc/numpy/index.html
+.. _pytorch: https://pytorch.org/docs/stable/index.html
