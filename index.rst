@@ -14,6 +14,7 @@ Welcome to cheatsheet's documentation!
    Tips/Dataset
    Tips/Tools
    Tips/DeepLearning
+   Tips/Technique
 
 
 Indices and tables

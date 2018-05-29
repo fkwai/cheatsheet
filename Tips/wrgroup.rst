@@ -10,11 +10,8 @@ Computers
 - Windows Work Station, 130.203.207.223
 - My Computer, 130.203.208.181
 
-Access tips
------------
-
 tight VNC
-~~~~~~~~~
+---------
 
 `tightVNC tutorial`_ to setup
 
@@ -38,8 +35,16 @@ Restart server VNC::
     sudo systemctl enable vncserver@1.service
     sudo systemctl start vncserver@1
 
+hack to fix VScode / Atom display::
+
+    mkdir ~/lib
+    cp /usr/lib/x86_64-linux-gnu/libxcb.so.1 ~/lib
+    cp /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0 ~/lib
+    sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+
+
 Memory Manage
-~~~~~~~~~~~~~
+-------------
 
 1. cgroup 可以限制用户的内存. Steps:
 
@@ -57,6 +62,33 @@ Memory Manage
 
 2. 更改 /etc/security/limits.conf 然后重启
 这个我没太搞明白。但应该是限制单个process的。
+
+
+Mount Drives
+------------
+
+- find uuid::
+
+    sudo blkid
+
+- modify /etc/fstab
+
+    just follow this example::
+
+        UUID=b4aefb54-e1c7-4378-9380-13eea35ad943   /mnt/sdc/   ext4    defaults    2   2
+
+- restart or mount -a
+
+
+CUDA
+----
+
+Add path::
+
+	export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+	export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\ $LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
 
 .. _tightVNC tutorial: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04
 .. _cgroup tutorial: http://www.fernandoalmeida.net/blog/how-to-limit-cpu-and-memory-usage-with-cgroups-on-debian-ubuntu/
