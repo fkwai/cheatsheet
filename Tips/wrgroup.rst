@@ -106,7 +106,7 @@ Remote notebook:
 
 - terminal 2::
 
-    ssh -N -L localhost:8888:localhost:8889 kxf227@130.203.207.218
+    ssh -nNT -L localhost:8888:localhost:8889 kxf227@130.203.207.218
 
 - browser::
 
