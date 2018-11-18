@@ -92,3 +92,22 @@ Add path::
 
 .. _tightVNC tutorial: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04
 .. _cgroup tutorial: http://www.fernandoalmeida.net/blog/how-to-limit-cpu-and-memory-usage-with-cgroups-on-debian-ubuntu/
+
+
+Jupyter Notebook
+----------------
+
+Remote notebook:
+
+- terminal 1::
+
+    ssh kxf227@130.203.207.218
+    jupyter notebook --no-browser --port=8889
+
+- terminal 2::
+
+    ssh -N -L localhost:8888:localhost:8889 kxf227@130.203.207.218
+
+- browser::
+
+    localhost:8888
